@@ -1,0 +1,31 @@
+<h1 style="font-family: yellowtail; text-decoration: underline">Headline</h1>
+<div *ngFor="let currentNews of news">
+  <div class="row" style="font-family: 'Times New Roman', Times, serif">
+    <div class="col-md-4">
+      <img
+        class="img-fluid mt-2"
+        src="{{ currentNews.urlToImage }}"
+        alt="image"
+      />
+    </div>
+    <div class="col-md-8">
+      <h3>{{ currentNews.title }}</h3>
+      <p>{{ currentNews.description }}</p>
+      <a [routerLink]="['/covid/content']">
+        <button class="btn btn-primary">Read More</button>
+
+      </a>
+  </div>
+  <!-- <img  [src]="currentNews.urlToImage" width="300" height="200">
+  <h5 class="text-justify">{{ currentNews.title }}</h5> -->
+</div>
+<div class="mt-5">
+  <p
+    style="
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    "
+  >
+    Click below to get the covid-19 countries statistical data:
+  </p>
+  <a class="" [routerLink]="'/data'">click me </a>
+</div>

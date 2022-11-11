@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+//app.component.ts
+import {Component, OnInit} from '@angular/core'; // Importing OnInit hook
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'api-angular';
+export class AppComponent implements OnInit {
+	// Implementing OnInit
+
+	constructor() {}
+
+	ngOnInit() {
+			}
 }
