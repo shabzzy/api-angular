@@ -1,0 +1,26 @@
+<input
+    style="background-color: #f1f1f1; height: 2rem; width: 20rem"
+    type="text"
+    placeholder="Search"
+    [(ngModel)]="term"
+    class="mr-sm-2 rounded border-0 mt-2 searchTerm"
+  /><i
+    style="margin-left: -25px !important; font-size: 20px; opacity: 0.5"
+    class="fa fa-times position-absolute mt-3 font-weight-bold"
+  ></i>
+<br /><br />
+<table border="1px" width="100%">
+  <tr>
+    <th>Country</th>
+    <th>Deaths</th>
+    <th>Recovered</th>
+    <th>Active</th>
+  </tr>
+  <tr *ngFor="let country of posts | filter: term">
+    <td>{{ country.Country }}</td>
+    <td>{{ country.Deaths_1M_pop }}</td>
+    <td>{{ country.NewRecovered }}</td>
+    <td>{{ country.ActiveCases }}</td>
+  </tr>
+</table>
+<a [routerLink]="'/covid'">go back</a>
