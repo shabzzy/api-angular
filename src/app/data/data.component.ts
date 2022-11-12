@@ -11,7 +11,6 @@ export class DataComponent implements OnInit {
   term = '';
   	// Implementing OnInit
     posts:any =[]
-    news:any =[]
 
     constructor(private http: HttpClient) {}
     title = 'api-angular';

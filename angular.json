@@ -66,6 +66,10 @@
             "production": {
               "browserTarget": "api-angular:build:production"
             },
+            "options": {
+              "browserTarget": "move-safe:build",
+              "proxyConfig": "src/proxy.conf.json"
+       },
             "development": {
               "browserTarget": "api-angular:build:development"
             }
@@ -102,3 +106,4 @@
     "analytics": "63c0d858-f55a-4f62-9e06-23bfad1c74b7"
   }
 }
+

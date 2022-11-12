@@ -29,7 +29,7 @@ export class CovidComponent implements OnInit {
           element.news.forEach((element: any) => {
             this.news.push(element);
             console.log(this.news);
-            
+
           });
         })
 

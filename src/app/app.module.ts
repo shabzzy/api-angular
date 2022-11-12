@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DataComponent } from './data/data.component';
 import { ContentPageComponent } from './content-page/content-page.component';
+import { WorldComponent } from './world/world.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ContentPageComponent } from './content-page/content-page.component';
     USComponent,
     HomeComponent,
     DataComponent,
-    ContentPageComponent
+    ContentPageComponent,
+    WorldComponent
   ],
   imports: [
     BrowserModule,

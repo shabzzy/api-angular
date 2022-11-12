@@ -5,6 +5,7 @@ import { CovidComponent } from './covid/covid.component';
 import { DataComponent } from './data/data.component';
 import { HomeComponent } from './home/home.component';
 import { USComponent } from './us/us.component';
+import { WorldComponent } from './world/world.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:'covid',component:CovidComponent},
   {path:'us',component:USComponent},
   {path:'data', component:DataComponent},
-  {path:'covid/content' , component:ContentPageComponent}
+  {path:'covid/content' , component:ContentPageComponent},
+  {path:'world',component:WorldComponent}
 
 ];
 
