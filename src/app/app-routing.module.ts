@@ -5,6 +5,7 @@ import { CovidComponent } from './covid/covid.component';
 import { DataComponent } from './data/data.component';
 import { HomeComponent } from './home/home.component';
 import { USComponent } from './us/us.component';
+import { WeatherComponent } from './weather/weather.component';
 import { WorldComponent } from './world/world.component';
 
 const routes: Routes = [
@@ -14,8 +15,8 @@ const routes: Routes = [
   {path:'us',component:USComponent},
   {path:'data', component:DataComponent},
   {path:'covid/content' , component:ContentPageComponent},
-  {path:'world',component:WorldComponent}
-
+  {path:'world',component:WorldComponent},
+  {path:'weather',component:WeatherComponent}
 ];
 
 @NgModule({

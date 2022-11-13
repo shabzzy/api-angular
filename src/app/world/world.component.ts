@@ -7,27 +7,27 @@
     })
     export class WorldComponent implements OnInit {
 
-      posts:any =[]
-      news:any =[]
+      randomNews: any = [];
 
-      constructor(private http: HttpClient) {}
-      title = 'api-angular';
-      ngOnInit() {
-        // API Call
-      let headers = new HttpHeaders({
-        'api-Key': 'jU5laZzhByndXCAIUpr3s5qIVwgYP0xd',
-
-      });
-      this.http
-        .get<any>('https://api.apilayer.com/world_news/extract-news',{headers: {'Access-Control-Allow-Origin' : '*'}}
-        )
-        .subscribe((response: any) => {
-          this.posts = response;
-
-
-          console.log(this.posts);
+  constructor(private http: HttpClient) {}
+  title = 'api-angular';
+  ngOnInit() {
+    // API Call
+    let header = new HttpHeaders({
+      'X-RapidAPI-Key': '2de9b79067msh5301ef1f2b8c07dp17c00fjsn1c56d532cd34',
+		'X-RapidAPI-Host': 'news-api14.p.rapidapi.com'
+    });
+    this.http
+      .get<any>(
+        'https://news-api14.p.rapidapi.com/top-headlines?country=us&language=en&pageSize=10&category=sports',{
+        headers: header
+      })
+      .subscribe((element) => {
+        element.articles.forEach((element: any) => {
+          this.randomNews.push(element);
+          console.log(this.randomNews);
         });
+      });
     //solving the cors error when calling the api
-
-
-    }}
+  }
+}

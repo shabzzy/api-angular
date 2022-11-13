@@ -13,6 +13,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DataComponent } from './data/data.component';
 import { ContentPageComponent } from './content-page/content-page.component';
 import { WorldComponent } from './world/world.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { WorldComponent } from './world/world.component';
     HomeComponent,
     DataComponent,
     ContentPageComponent,
-    WorldComponent
+    WorldComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
